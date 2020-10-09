@@ -67,13 +67,13 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-      <h1>{Heading}</h1>
+      <h1 style={{paddingTop: "20px"}}>{Heading}</h1>
         <header>
           <form id="to-do-form" onSubmit={this.addItem}>
             <input type="text" placeholder="Enter task" value={this.state.currentItem.text} onChange={this.handleInput}></input>
             <button type="submit">Add</button>
           </form>
-          <p>{this.state.items.text}</p>
+          <p className="listItem">{this.state.items.text}</p>
           <Listitems items={this.state.items} deleteItem={this.deleteItem} setUpdate={this.setUpdate} />
         </header>
       </div>
